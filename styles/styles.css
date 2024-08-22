@@ -60,16 +60,19 @@ section {
 .sec1 {
   display: none;
   transform: translateY(0%) scale(1);
+  background-color: green;
 }
 
 .sec2 {
   display: none;
   transform: translateY(0%) scale(1);
+  background-color: #fff;
 }
 
 .sec3 {
   display: none;
   transform: translateY(0%) scale(1);
+  background-color: orange;
 }
 
 .sec4 {
@@ -80,6 +83,19 @@ section {
 .sec5 {
   display: none;
   transform: translateY(0%) scale(1);
+}
+
+.active {
+  display: block !important;
+  animation: scaleAnim 1s ease-in-out;
+}
+@keyframes scaleAnim {
+  0% {
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    transform: translateY(0%) scaleY(1);
+  }
 }
 
 .controls {
@@ -104,8 +120,8 @@ section {
   padding: 1rem;
   cursor: pointer;
   background-color: var(--color-grey4);
-  width: 55%;
-  height: 55%;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
