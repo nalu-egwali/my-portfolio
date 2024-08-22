@@ -2,7 +2,7 @@
 const sections = document.querySelectorAll('.section');
 const sectionBtns = document.querySelector('.controls');
 const sectionBtn = document.querySelectorAll('.control');
-const allSection = document.querySelectorAll('.main-content');
+const allSections = document.querySelectorAll('.main-content');
 
 function pageTransitions() {
     for(let i = 0; i < sectionBtn.length; i++ ) {
@@ -12,6 +12,31 @@ function pageTransitions() {
             this.className += ' active-btn';
         })
     }
+
+    // sections active
+    sectionBtn.forEach(btn => {
+        btn.addEventListener('click', (e)=> {
+            const id = e.target.dataset.id;
+            if (id) {
+                //remove active from all buttons
+                sectionBtn.forEach(btn => {
+                    btn.classList.remove('active');
+                })
+                // activate the target button
+                e.target.classList.add('active');
+
+                // deactivate all sections
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                })
+                // activate the target section
+                const targetSection = document.getElementById(id);
+                targetSection.classList.add('active');
+
+            }
+        })
+    })
+
 }
 
 pageTransitions();
