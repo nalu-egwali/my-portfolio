@@ -131,12 +131,25 @@ section {
             color: var(--color-grey2);
             pointer-events: none;
         }
+        &::before {
+            display: none;
+            content: attr(data-id);
+            position: absolute;
+            //top: 0;
+            //bottom: 0;
+            transform: translateY(150%);
+            transition: all .4s ease-in-out;
+            z-index: -1;
+        }
         &:hover {
+            &::before {
+                display: block;
+                font-weight: 600;
+            }
             border-radius: 25%;
             background-color: var(--color-grey5);
-            box-shadow: 0 0 15px #e70505d7;
+            box-shadow: 0 0 10px var(--color-secondary), 0 0 15px var(--color-white);
             transition: all .4s ease-in-out;
-
         }
     }
 }

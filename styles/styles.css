@@ -132,11 +132,23 @@ section {
   color: var(--color-grey2);
   pointer-events: none;
 }
+.controls .control::before {
+  display: none;
+  content: attr(data-id);
+  position: absolute;
+  transform: translateY(150%);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+}
 .controls .control:hover {
   border-radius: 25%;
   background-color: var(--color-grey5);
-  box-shadow: 0 0 15px rgba(231, 5, 5, 0.8431372549);
+  box-shadow: 0 0 10px var(--color-secondary), 0 0 15px var(--color-white);
   transition: all 0.4s ease-in-out;
+}
+.controls .control:hover::before {
+  display: block;
+  font-weight: 600;
 }
 
 /* header content */
