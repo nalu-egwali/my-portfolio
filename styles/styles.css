@@ -132,6 +132,12 @@ section {
   color: var(--color-grey2);
   pointer-events: none;
 }
+.controls .control:hover {
+  border-radius: 25%;
+  background-color: var(--color-grey5);
+  box-shadow: 0 0 15px rgba(231, 5, 5, 0.8431372549);
+  transition: all 0.4s ease-in-out;
+}
 
 /* header content */
 .header-content {

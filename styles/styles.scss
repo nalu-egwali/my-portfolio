@@ -131,6 +131,13 @@ section {
             color: var(--color-grey2);
             pointer-events: none;
         }
+        &:hover {
+            border-radius: 25%;
+            background-color: var(--color-grey5);
+            box-shadow: 0 0 15px #e70505d7;
+            transition: all .4s ease-in-out;
+
+        }
     }
 }
 
