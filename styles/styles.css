@@ -19,11 +19,13 @@
   --color-grey6: #12181b;
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.2);
+  font-size: 12px;
 }
 
 body {
   background-color: var(--color-primary);
   font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
   color: var(--color-white);
   transition: all 0.4s ease-in-out;
 }
@@ -117,8 +119,8 @@ section {
   padding: 1rem;
   cursor: pointer;
   background-color: var(--color-grey4);
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -199,6 +201,9 @@ section {
   justify-content: center;
   padding-right: 18%;
 }
+.header-content .right-header .name {
+  font-size: 3rem;
+}
 .header-content .right-header .name span {
   color: var(--color-secondary);
 }
@@ -243,6 +248,30 @@ section {
 .about-container .right-about .about-item .about-text .small-text {
   padding-left: 3rem;
   position: relative;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--color-grey-1);
+  letter-spacing: 2px;
+}
+.about-container .right-about .about-item .about-text .small-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 2rem;
+  height: 15px;
+  background-color: var(--color-grey5);
+}
+.about-container .left-about {
+  padding-right: 5rem;
+}
+.about-container .left-about p {
+  line-height: 2rem;
+  padding: 1rem;
+  color: var(--color-grey-1);
+}
+.about-container .left-about h4 {
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
